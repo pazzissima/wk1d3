@@ -1,3 +1,17 @@
+# Write a function called blend.
+# It should take all the smoothie ingredients (not the measurements) and chop up and mix all the characters
+# and output a mixed string of characters
+# Be sure to remove the spaces, as we don't want any air bubbles in our smoothie!
+
+# create a class called Blender
+# It should have a method that takes an array of ingredients and returns a mixed string of characters.
+# Give the blender an on and off switch and only allow the blender to function when it's on.
+# FOR SAFETY'S SAKE When you create a new blender by default it should be off.
+# Blend the the smoothie array
+
+
+
+
 smoothie_ingredients = {
 "flax seeds" => "1 tbsp",
 "chia seeds" => "1 tbsp",
@@ -28,7 +42,7 @@ class Blender
 
 	attr_accessor:on
 	def initialize(smoothie_ingredients)
-		@on = false
+		@on = true
 		@smoothie_ingredients = smoothie_ingredients
 	end
 
@@ -40,7 +54,7 @@ def blend
 		ingredients = ingredients.split("").shuffle.join
 		puts ingredients
 	else
-		puts "Turn me on"
+		puts "Press the Blend button"
 	end
 end
 def switch_on
